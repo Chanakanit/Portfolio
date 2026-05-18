@@ -395,7 +395,7 @@ export const projects = [
       "/assets/projects/helloworld/1.png"
     ],
     techIcons: [
-      { icon: "/assets/assets/logo-stack/MySQL.png", name: "MySQL" },
+      { icon: "/assets/logo-stack/MySQL.png", name: "MySQL" }, // แก้ไข /assets/assets/ ที่ซ้อนกันออกแล้ว
     ],
     desc: "Room booking system database design project created for Hello World 2025 activity.",
     tech: [

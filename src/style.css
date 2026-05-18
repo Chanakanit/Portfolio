@@ -53,28 +53,28 @@
   --color-text-dark-muted:   #9ca3af;
 
   /* Logo */
-  --background-image-logo-dark:       url('../src/assets/logo/logo-light-chanakanit.svg');
-  --background-image-logo-light:      url('../src/assets/logo/logo-dark-chanakanit.svg');
-  --background-image-logo-hero-light: url('../src/assets/logo/logo-model-light.svg');
-  --background-image-logo-hero-dark:  url('../src/assets/logo/logo-model-dark.svg');
+  --background-image-logo-dark:       url('/assets/logo/logo-light-chanakanit.svg');
+  --background-image-logo-light:      url('/assets/logo/logo-dark-chanakanit.svg');
+  --background-image-logo-hero-light: url('/assets/logo/logo-model-light.svg');
+  --background-image-logo-hero-dark:  url('/assets/logo/logo-model-dark.svg');
 
   /* Profile */
-  --background-image-Profile:  url('../src/assets/Profile.svg');
+  --background-image-Profile:  url('/assets/Profile.svg');
 
   /* Background */
-  --background-image-universal:  url('../src/assets/bg/universal.png');
-  --background-image-stack-light:  url('../src/assets/bg/bg-stack-light.png');
-  --background-image-stack-dark:  url('../src/assets/bg/bg-stack-dark.png');
+  --background-image-universal:    url('/assets/bg/universal.png');
+  --background-image-stack-light:  url('/assets/bg/bg-stack-light.png');
+  --background-image-stack-dark:   url('/assets/bg/bg-stack-dark.png');
 
   /* Icons */
-  --background-image-icon-face-light:      url('../src/assets/icon/facebook-white.png');
-  --background-image-icon-face-dark:       url('../src/assets/icon/facebook.png');
-  --background-image-icon-email-light:     url('../src/assets/icon/email-white.png');
-  --background-image-icon-email-dark:      url('../src/assets/icon/email.png');
-  --background-image-icon-github-light:    url('../src/assets/icon/github-white.png');
-  --background-image-icon-github-dark:     url('../src/assets/icon/github.png');
-  --background-image-icon-instagram-dark:  url('../src/assets/icon/instagram.png');
-  --background-image-icon-instagram-light: url('../src/assets/icon/instagram-white.png');
+  --background-image-icon-face-light:      url('/assets/icon/facebook-white.png');
+  --background-image-icon-face-dark:       url('/assets/icon/facebook.png');
+  --background-image-icon-email-light:     url('/assets/icon/email-white.png');
+  --background-image-icon-email-dark:      url('/assets/icon/email.png');
+  --background-image-icon-github-light:    url('/assets/icon/github-white.png');
+  --background-image-icon-github-dark:     url('/assets/icon/github.png');
+  --background-image-icon-instagram-dark:  url('/assets/icon/instagram.png');
+  --background-image-icon-instagram-light: url('/assets/icon/instagram-white.png');
 }
 
 

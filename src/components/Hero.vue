@@ -16,7 +16,6 @@ const socialLinks = [
         aria-labelledby="hero-heading"
         class="flex flex-col-reverse px-6 py-8 md:p-0 md:flex-row gap-12 h-screen bg-white dark:bg-bg-dark smooth"
     >
-        <!-- Left: Text content -->
         <div class="relative flex flex-col h-full justify-center flex-1 opacity-0 animate-delay-200 animate-fade-left">
 
             <p class="smooth-bg text-gradient-primary uppercase mb-3 text-lg font-semibold animate-typing" style="--typing-chars: 19; --typing-duration: 2s;" aria-hidden="true">
@@ -32,7 +31,6 @@ const socialLinks = [
                 Creating clean, responsive, and user-friendly web applications.
             </p>
 
-            <!-- Social links -->
             <div class="absolute bottom-22">
                 <p class="text-gray-500 font-bold mb-4 text-xs tracking-widest select-none uppercase" aria-hidden="true">
                     Find me on
@@ -57,27 +55,26 @@ const socialLinks = [
             </div>
         </div>
 
-        <!-- Right: Animation (decorative) -->
         <div
             class="hidden md:inline-flex relative flex-1 h-full rounded-full smooth opacity-0 animate-delay-200 animate-fade-right"
             aria-hidden="true"
             role="presentation"
         >
             <video autoplay muted loop playsinline
-                poster="/src/assets/logo/logo-model-dark.svg"
+                poster="/assets/logo/logo-model-dark.svg"
                 class="hidden dark:block absolute inset-0 h-full w-full object-contain opacity-80 smooth"
             >
-                <source src="/src/assets/logo/animation-logo-dark.mp4" type="video/mp4" />
+                <source src="/assets/logo/animation-logo-dark.mp4" type="video/mp4" />
             </video>
+            
             <video autoplay muted loop playsinline
-                poster="/src/assets/logo/logo-model-light.svg"
+                poster="/assets/logo/logo-model-light.svg"
                 class="block dark:hidden absolute inset-0 h-full w-full object-contain smooth"
             >
-                <source src="/src/assets/logo/animation-logo-light.mp4" type="video/mp4" />
+                <source src="/assets/logo/animation-logo-light.mp4" type="video/mp4" />
             </video>
         </div>
 
-        <!-- Scroll indicator (decorative) -->
         <div
             class="absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center justify-center"
             aria-hidden="true"
