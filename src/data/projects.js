@@ -13,18 +13,18 @@ export const projects = [
       "Anon Yanying"
     ],
     screenshot: [
-      "/src/assets/projects/healjai/logo.png",
-      "/src/assets/projects/healjai/1.png",
-      "/src/assets/projects/healjai/2.png",
-      "/src/assets/projects/healjai/3.png",
-      "/src/assets/projects/healjai/4.png",
-      "/src/assets/projects/healjai/5.png",
+      "/assets/projects/healjai/logo.png",
+      "/assets/projects/healjai/1.png",
+      "/assets/projects/healjai/2.png",
+      "/assets/projects/healjai/3.png",
+      "/assets/projects/healjai/4.png",
+      "/assets/projects/healjai/5.png",
     ],
     techIcons: [
-      { icon: "/src/assets/logo-stack/Vue.png", name: "Vue 3" },
-      { icon: "/src/assets/logo-stack/Tailwind.png", name: "Tailwind CSS" },
-      { icon: "/src/assets/logo-stack/js.png", name: "JavaScript" },
-      { icon: "/src/assets/logo-stack/indexeddb.png", name: "IndexedDB" }
+      { icon: "/assets/logo-stack/Vue.png", name: "Vue 3" },
+      { icon: "/assets/logo-stack/Tailwind.png", name: "Tailwind CSS" },
+      { icon: "/assets/logo-stack/js.png", name: "JavaScript" },
+      { icon: "/assets/logo-stack/indexeddb.png", name: "IndexedDB" }
     ],
     desc: "Mental wellness tracking and activity booking platform designed for university students.",
     tech: [
@@ -78,16 +78,16 @@ export const projects = [
     roleType: "Individual",
     contributors: ["Chanakan Ukhaow"],
     screenshot: [
-      "/src/assets/projects/fylo/1.png",
-      "/src/assets/projects/fylo/2.png",
-      "/src/assets/projects/fylo/3.png",
-      "/src/assets/projects/fylo/4.png",
-      "/src/assets/projects/fylo/5.png"
+      "/assets/projects/fylo/1.png",
+      "/assets/projects/fylo/2.png",
+      "/assets/projects/fylo/3.png",
+      "/assets/projects/fylo/4.png",
+      "/assets/projects/fylo/5.png"
     ],
     techIcons: [
-      { icon: "/src/assets/logo-stack/Vue.png", name: "Vue 3" },
-      { icon: "/src/assets/logo-stack/Tailwind.png", name: "Tailwind CSS" },
-      { icon: "/src/assets/logo-stack/js.png", name: "JavaScript" }
+      { icon: "/assets/logo-stack/Vue.png", name: "Vue 3" },
+      { icon: "/assets/logo-stack/Tailwind.png", name: "Tailwind CSS" },
+      { icon: "/assets/logo-stack/js.png", name: "JavaScript" }
     ],
     desc: "Responsive Fylo landing page clone built with Vue and Tailwind CSS.",
     tech: [
@@ -139,15 +139,15 @@ export const projects = [
     roleType: "Individual",
     contributors: ["Chanakan Ukhaow"],
     screenshot: [
-      "/src/assets/projects/flashcards/1.png",
-      "/src/assets/projects/flashcards/2.png",
-      "/src/assets/projects/flashcards/3.png",
-      "/src/assets/projects/flashcards/4.png",
-      "/src/assets/projects/flashcards/5.png",
-      "/src/assets/projects/flashcards/6.png",
+      "/assets/projects/flashcards/1.png",
+      "/assets/projects/flashcards/2.png",
+      "/assets/projects/flashcards/3.png",
+      "/assets/projects/flashcards/4.png",
+      "/assets/projects/flashcards/5.png",
+      "/assets/projects/flashcards/6.png",
     ],
     techIcons: [
-      { icon: "/src/assets/logo-stack/python.png", name: "Python" }
+      { icon: "/assets/logo-stack/python.png", name: "Python" }
     ],
     desc: "Command-line flashcard application for creating, managing, and reviewing study questions with user authentication support.",
     tech: [
@@ -200,14 +200,14 @@ export const projects = [
     roleType: "Individual",
     contributors: ["Chanakan Ukhaow"],
     screenshot: [
-      "/src/assets/projects/learnspace/1.png",
-      "/src/assets/projects/learnspace/2.png",
-      "/src/assets/projects/learnspace/3.png",
+      "/assets/projects/learnspace/1.png",
+      "/assets/projects/learnspace/2.png",
+      "/assets/projects/learnspace/3.png",
     ],
     techIcons: [
-      { icon: "/src/assets/logo-stack/Vue.png", name: "Vue 3" },
-      { icon: "/src/assets/logo-stack/Tailwind.png", name: "Tailwind CSS" },
-      { icon: "/src/assets/logo-stack/js.png", name: "JavaScript" }
+      { icon: "/assets/logo-stack/Vue.png", name: "Vue 3" },
+      { icon: "/assets/logo-stack/Tailwind.png", name: "Tailwind CSS" },
+      { icon: "/assets/logo-stack/js.png", name: "JavaScript" }
     ],
     desc: "Modern educational platform UI focused on responsive layouts and clean learning experiences.",
     tech: [
@@ -263,18 +263,18 @@ export const projects = [
       "NATTHASITH BOONHENG"
     ],
     screenshot: [
-      "/src/assets/projects/ecors/ecors-1.png",
-      "/src/assets/projects/ecors/ecors-2.png"
+      "/assets/projects/ecors/ecors-1.png",
+      "/assets/projects/ecors/ecors-2.png"
     ],
     techIcons: [
-      { icon: "/src/assets/logo-stack/html.png", name: "HTML" },
-      { icon: "/src/assets/logo-stack/CSS3.svg", name: "CSS" },
-      { icon: "/src/assets/logo-stack/js.png", name: "JavaScript" },
-      { icon: "/src/assets/logo-stack/Node.js.png", name: "Node.js" },
-      { icon: "/src/assets/logo-stack/Express.png", name: "Express" },
-      { icon: "/src/assets/logo-stack/MySQL.png", name: "MySQL" },
-      { icon: "/src/assets/logo-stack/docker.png", name: "Docker" },
-      { icon: "/src/assets/logo-stack/keycloak.png", name: "Keycloak" }
+      { icon: "/assets/logo-stack/html.png", name: "HTML" },
+      { icon: "/assets/logo-stack/CSS3.svg", name: "CSS" },
+      { icon: "/assets/logo-stack/js.png", name: "JavaScript" },
+      { icon: "/assets/logo-stack/Node.js.png", name: "Node.js" },
+      { icon: "/assets/logo-stack/Express.png", name: "Express" },
+      { icon: "/assets/logo-stack/MySQL.png", name: "MySQL" },
+      { icon: "/assets/logo-stack/docker.png", name: "Docker" },
+      { icon: "/assets/logo-stack/keycloak.png", name: "Keycloak" }
     ],
     desc: "Study plan reservation system with authentication and real-time management features.",
     tech: [
@@ -331,14 +331,14 @@ export const projects = [
     roleType: "Individual",
     contributors: ["Chanakan Ukhaow"],
     screenshot: [
-      "/src/assets/projects/loopstudios/1.png",
-      "/src/assets/projects/loopstudios/2.png",
-      "/src/assets/projects/loopstudios/3.png",
+      "/assets/projects/loopstudios/1.png",
+      "/assets/projects/loopstudios/2.png",
+      "/assets/projects/loopstudios/3.png",
     ],
     techIcons: [
-      { icon: "/src/assets/logo-stack/Vue.png", name: "Vue 3" },
-      { icon: "/src/assets/logo-stack/Tailwind.png", name: "Tailwind CSS" },
-      { icon: "/src/assets/logo-stack/js.png", name: "JavaScript" }
+      { icon: "/assets/logo-stack/Vue.png", name: "Vue 3" },
+      { icon: "/assets/logo-stack/Tailwind.png", name: "Tailwind CSS" },
+      { icon: "/assets/logo-stack/js.png", name: "JavaScript" }
     ],
     desc: "Responsive Loopstudios landing page clone with modern UI and immersive layout design.",
     tech: [
@@ -392,10 +392,10 @@ export const projects = [
       "Benyapa Wannalookkhee"
     ],
     screenshot: [
-      "/src/assets/projects/helloworld/1.png"
+      "/assets/projects/helloworld/1.png"
     ],
     techIcons: [
-      { icon: "/src/assets/logo-stack/MySQL.png", name: "MySQL" },
+      { icon: "/assets/assets/logo-stack/MySQL.png", name: "MySQL" },
     ],
     desc: "Room booking system database design project created for Hello World 2025 activity.",
     tech: [

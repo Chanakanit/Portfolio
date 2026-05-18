@@ -31,13 +31,13 @@ const openImage = (index) => {
     <Transition name="modal">
       <div
         v-if="show && project"
-        class="fixed inset-0 z-100 p-10 md:px-16 w-full overflow-y-auto bg-bg-light dark:bg-bg-dark dark:text-white "
+        class="fixed inset-0 z-100 p-4 md:p-10 md:px-16 w-full overflow-y-auto bg-bg-light dark:bg-bg-dark dark:text-white "
       >
         <!-- Nav -->
         <div class="flex justify-between">
           <button
             @click="$emit('close')"
-            class="flex items-center gap-2 px-4 py-2 rounded-2xl text-purple-700 hover:text-secondary dark:text-accent  dark:hover:text-accent-dark-soft transition  -all"
+            class="flex items-center gap-2 py-2 rounded-2xl text-purple-700 hover:text-secondary dark:text-accent  dark:hover:text-accent-dark-soft transition  -all"
           >
             <span class="material-symbols-outlined">
               arrow_back
