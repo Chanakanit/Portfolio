@@ -5,6 +5,8 @@ import About from './components/About.vue';
 import Skills from './components/Skills.vue';
 import Project from './components/Project.vue';
 import Activities from './components/Activities.vue';
+import Contact from './components/Contact.vue';
+import Footer from './components/Footer.vue';
 </script>
 
 <template>
@@ -15,5 +17,7 @@ import Activities from './components/Activities.vue';
     <Skills/>
     <Project/>
     <Activities/>
+    <Contact/>
+    <Footer/>
   </div>
 </template>
