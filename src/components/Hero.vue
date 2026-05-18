@@ -79,7 +79,7 @@ const socialLinks = [
             </div>
 
             <!-- Social -->
-            <div class="absolute bottom-20 z-10">
+            <div class="absolute bottom-30 md:bottom-20 z-10">
                 <p
                     class="text-gray-500 font-bold mb-4 text-xs tracking-widest select-none uppercase"
                     aria-hidden="true"

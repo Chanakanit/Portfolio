@@ -119,17 +119,17 @@ const filtered = computed(() => {
             <div class="flex items-start gap-5">
               <!-- icon -->
               <div
-                class="min-w-20 h-20 rounded-full bg-purple-500/10 border border-purple-500/30 flex items-center justify-center"
+                class="min-w-10 md:min-w-20 h-10 md:h-20 rounded-full bg-purple-500/10 border border-purple-500/30 flex items-center justify-center"
               >
                 <span
-                  class="material-symbols-outlined text-yellow-400 text-5xl"
+                  class="material-symbols-outlined text-yellow-400 text-3xl"
                 >
                   {{ act.icon }}
                 </span>
               </div>
 
               <div>
-                <h3 class="text-2xl font-bold">
+                <h3 class="text-lg md:text-2xl font-bold">
                   {{ act.title }}
                 </h3>
 
