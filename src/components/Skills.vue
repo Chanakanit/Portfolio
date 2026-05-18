@@ -4,41 +4,41 @@ const skillCategories = [
     title: "Frontend",
     icon: "code",
     skills: [
-      { icon: "/src/assets/logo-stack/Vue.png", name: "Vue.js" },
-      { icon: "/src/assets/logo-stack/js.png", name: "JavaScript" },
-      { icon: "/src/assets/logo-stack/html.png", name: "HTML5" },
-      { icon: "/src/assets/logo-stack/CSS3.svg", name: "CSS3" },
-      { icon: "/src/assets/logo-stack/Tailwind.png", name: "Tailwind CSS" },
+      { icon: "../../src/assets/logo-stack/Vue.png", name: "Vue.js" },
+      { icon: "../../src/assets/logo-stack/js.png", name: "JavaScript" },
+      { icon: "../../src/assets/logo-stack/html.png", name: "HTML5" },
+      { icon: "../../src/assets/logo-stack/CSS3.svg", name: "CSS3" },
+      { icon: "../../src/assets/logo-stack/Tailwind.png", name: "Tailwind CSS" },
     ],
   },
   {
     title: "Backend",
     icon: "dns",
     skills: [
-      { icon: "/src/assets/logo-stack/Node.js.png", name: "Node.js" },
-      { icon: "/src/assets/logo-stack/Express.png", name: "Express.js" },
-      { icon: "/src/assets/logo-stack/MySQL.png", name: "MySQL" },
-      { icon: "/src/assets/logo-stack/docker.png", name: "Docker" },
+      { icon: "../../src/assets/logo-stack/Node.js.png", name: "Node.js" },
+      { icon: "../../src/assets/logo-stack/Express.png", name: "Express.js" },
+      { icon: "../../src/assets/logo-stack/MySQL.png", name: "MySQL" },
+      { icon: "../../src/assets/logo-stack/docker.png", name: "Docker" },
     ],
   },
   {
     title: "Tools",
     icon: "construction",
     skills: [
-      { icon: "/src/assets/logo-stack/git.png", name: "Git" },
-      { icon: "/src/assets/logo-stack/github.png", name: "GitHub" },
-      { icon: "/src/assets/logo-stack/vscode.png", name: "VS Code" }
+      { icon: "../../src/assets/logo-stack/git.png", name: "Git" },
+      { icon: "../../src/assets/logo-stack/github.png", name: "GitHub" },
+      { icon: "../../src/assets/logo-stack/vscode.png", name: "VS Code" }
     ],
   },
   {
     title: "Soft Skills",
     icon: "person",
     skills: [
-      { icon: "/src/assets/logo-stack/puzzle.png", name: "Problem Solving" },
-      { icon: "/src/assets/logo-stack/lightning.png", name: "Fast Learning" },
-      { icon: "/src/assets/logo-stack/group.png", name: "Teamwork" },
-      { icon: "/src/assets/logo-stack/light-bulb.png", name: "Creativity" },
-      { icon: "/src/assets/logo-stack/chat.png", name: "Communication" },
+      { icon: "../../src/assets/logo-stack/puzzle.png", name: "Problem Solving" },
+      { icon: "../../src/assets/logo-stack/lightning.png", name: "Fast Learning" },
+      { icon: "../../src/assets/logo-stack/group.png", name: "Teamwork" },
+      { icon: "../../src/assets/logo-stack/light-bulb.png", name: "Creativity" },
+      { icon: "../../src/assets/logo-stack/chat.png", name: "Communication" },
     ],
   },
 ]

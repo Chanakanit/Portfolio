@@ -226,7 +226,7 @@ onUnmounted(() => window.removeEventListener("keydown", onKeydown))
               :key="index"
               @click="activeIndex = index"
               :class="[
-                ' h-[68px] rounded-xl overflow-hidden border-2 transition-all flex-shrink-0',
+                ' h-[68px] rounded-xl overflow-hidden border-2 transition-all',
                 index === activeIndex
                   ? 'border-purple-500 dark:border-purple-400 opacity-100 scale-105'
                   : 'border-gray-200 dark:border-white/10 opacity-50 hover:opacity-80',
