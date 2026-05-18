@@ -95,7 +95,7 @@ const openImage = (index) => {
                   open_in_new
                 </span>
 
-                <p>Livw Demo</p>
+                <p>Live Demo</p>
               </a>
 
               <span

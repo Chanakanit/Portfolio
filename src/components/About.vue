@@ -86,7 +86,7 @@ const timeline = [
                 </div>
             </div>
 
-            <div class="pt-12 flex flex-col md:flex-row items-center">
+            <div class="pt-12 flex flex-col md:flex-row ">
                 <!-- Journey -->
                 <div class="flex-1">
                     <!-- title -->
@@ -130,8 +130,8 @@ const timeline = [
                 </div>
 
                 <!-- Career Goal -->
-                <div class="flex-1 flex flex-col justify-center mt-4 md:mt-0">
-                    <div class="flex flex-col justify-center bg-blur bg-white/90 dark:bg-bg-dark/60 rounded-xl mx-4 md:mx-24 h-auto md:h-80 px-6 md:px-8 py-6">
+                <div class="flex-1  md:my-auto">
+                    <div class="flex flex-col justify-center bg-blur bg-white/90 dark:bg-bg-dark/60 rounded-xl mx-4 py-6 lg:mx-24 h-auto px-6 lg:px-8 ">
                         <div class="flex items-center gap-4 pb-4 md:pb-6">
                             <span class="material-symbols-outlined bg-blur p-3 rounded-full select-none text-orange-500" aria-hidden="true">
                                 flag
