@@ -79,7 +79,7 @@ const socialLinks = [
             </div>
 
             <!-- Social -->
-            <div class="absolute bottom-30 md:bottom-20 z-10">
+            <div class="absolute bottom-32 md:bottom-20 z-10">
                 <p
                     class="text-gray-500 font-bold mb-4 text-xs tracking-widest select-none uppercase"
                     aria-hidden="true"
@@ -151,7 +151,7 @@ const socialLinks = [
 
         <!-- Scroll -->
         <div
-            class="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center justify-center"
+            class="absolute bottom-5 md:bottom-8 left-1/2 -translate-x-1/2 flex items-center justify-center"
             aria-hidden="true"
         >
             <span
