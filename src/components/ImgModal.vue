@@ -69,7 +69,7 @@ onUnmounted(() => {
     <Transition name="fade">
       <div
         v-if="show"
-        class="fixed inset-0 z-150 flex items-center justify-center p-10 bg-black/80"
+        class="fixed inset-0 z-200 flex items-center justify-center p-10 bg-black/80"
       >
         <!-- close -->
         <button

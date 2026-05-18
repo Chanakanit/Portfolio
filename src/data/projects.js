@@ -147,7 +147,7 @@ export const projects = [
       "/src/assets/projects/flashcards/6.png",
     ],
     techIcons: [
-      { icon: "/src/assets/logo-stack/Python.png", name: "Python" }
+      { icon: "/src/assets/logo-stack/python.png", name: "Python" }
     ],
     desc: "Command-line flashcard application for creating, managing, and reviewing study questions with user authentication support.",
     tech: [
@@ -267,13 +267,13 @@ export const projects = [
       "/src/assets/projects/ecors/ecors-2.png"
     ],
     techIcons: [
-      { icon: "/src/assets/logo-stack/HTML.png", name: "HTML" },
+      { icon: "/src/assets/logo-stack/html.png", name: "HTML" },
       { icon: "/src/assets/logo-stack/CSS3.svg", name: "CSS" },
       { icon: "/src/assets/logo-stack/js.png", name: "JavaScript" },
-      { icon: "/src/assets/logo-stack/node.js.png", name: "Node.js" },
+      { icon: "/src/assets/logo-stack/Node.js.png", name: "Node.js" },
       { icon: "/src/assets/logo-stack/Express.png", name: "Express" },
       { icon: "/src/assets/logo-stack/MySQL.png", name: "MySQL" },
-      { icon: "/src/assets/logo-stack/Docker.png", name: "Docker" },
+      { icon: "/src/assets/logo-stack/docker.png", name: "Docker" },
       { icon: "/src/assets/logo-stack/keycloak.png", name: "Keycloak" }
     ],
     desc: "Study plan reservation system with authentication and real-time management features.",

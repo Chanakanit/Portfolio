@@ -1,7 +1,5 @@
 <script setup>
-import { watch } from "vue"
-
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import ProjectCard from './ProjectCard.vue'
 import ProjectModal from './ProjectModal.vue'
 import { categories, projects } from '../data/projects'
