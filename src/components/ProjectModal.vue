@@ -31,7 +31,7 @@ const openImage = (index) => {
     <Transition name="modal">
       <div
         v-if="show && project"
-        class="fixed inset-0 z-100 p-4 md:p-10 md:px-16 w-full overflow-y-auto bg-bg-light dark:bg-bg-dark dark:text-white "
+        class="fixed inset-0 z-100 p-2 md:p-10 md:px-16 w-full overflow-y-auto bg-bg-light dark:bg-bg-dark dark:text-white "
       >
         <!-- Nav -->
         <div class="flex justify-between">
@@ -82,7 +82,7 @@ const openImage = (index) => {
                 target="_blank"
                 class="flex gap-2 items-center px-4 py-2.5 rounded-xl bg-blur hover:shadow-none hover:border-black/20 dark:hover:border-white/30 text-sm font-semibold transition-all"
               >
-                <img src="../assets/logo-stack/github.png" class="w-6 h-6" alt=""> <p>GitHub</p>
+                <img src="/assets/logo-stack/github.png" class="w-6 h-6" alt=""> <p>GitHub</p>
               </a>
 
               <a
