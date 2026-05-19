@@ -1,14 +1,8 @@
 <script setup>
-import { ref } from 'vue'
+import { reactive, ref } from 'vue'
 import { useReveal } from '../script/useReveal.js'
 
 useReveal()
-
-const form = ref({
-  name: '',
-  email: '',
-  message: ''
-})
 
 const contacts = [
   {
@@ -40,6 +34,28 @@ const contacts = [
     color: 'text-blue-500'
   }
 ]
+
+const form = reactive({ name: '', email: '', message: '' })
+const status = ref('') // 'sending' | 'success' | 'error'
+
+async function handleSubmit() {
+  status.value = 'sending'
+
+  const res = await fetch('https://formspree.io/f/xwvzvpdp', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(form)
+  })
+
+  if (res.ok) {
+    status.value = 'success'
+    form.name = ''
+    form.email = ''
+    form.message = ''
+  } else {
+    status.value = 'error'
+  }
+}
 </script>
 
 <template>
@@ -124,26 +140,20 @@ const contacts = [
 
                 <!-- Right -->
                 <div class="opacity-0 animate-fade-right">
-                    <form
-                        class="bg-blur rounded-4xl p-8 md:p-10 border border-white/10 smooth-bg"
-                    >
-                        
+                    <form @submit.prevent="handleSubmit" class="bg-blur rounded-4xl p-8 md:p-10 border border-white/10 smooth-bg">
                         <div class="space-y-6">
 
                             <!-- Name -->
                             <div>
-                                <label
-                                    for="name"
-                                    class="block mb-3 text-sm uppercase tracking-widest text-slate-500"
-                                >
+                                <label for="name" class="block mb-3 text-sm uppercase tracking-widest text-slate-500">
                                     Your Name
                                 </label>
-
                                 <input
                                     id="name"
                                     v-model="form.name"
                                     type="text"
                                     placeholder="Enter your name"
+                                    required
                                     class="w-full rounded-2xl bg-blur-theme px-5 py-4 outline-none border border-white/10
                                            text-slate-800 dark:text-slate-100
                                            placeholder:text-slate-500 dark:placeholder:text-slate-400
@@ -153,18 +163,15 @@ const contacts = [
 
                             <!-- Email -->
                             <div>
-                                <label
-                                    for="email"
-                                    class="block mb-3 text-sm uppercase tracking-widest text-slate-500"
-                                >
+                                <label for="email" class="block mb-3 text-sm uppercase tracking-widest text-slate-500">
                                     Email Address
                                 </label>
-
                                 <input
                                     id="email"
                                     v-model="form.email"
                                     type="email"
                                     placeholder="Enter your email"
+                                    required
                                     class="w-full rounded-2xl bg-blur-theme px-5 py-4 outline-none border border-white/10
                                            text-slate-800 dark:text-slate-100
                                            placeholder:text-slate-500 dark:placeholder:text-slate-400
@@ -174,18 +181,15 @@ const contacts = [
 
                             <!-- Message -->
                             <div>
-                                <label
-                                    for="message"
-                                    class="block mb-3 text-sm uppercase tracking-widest text-slate-500"
-                                >
+                                <label for="message" class="block mb-3 text-sm uppercase tracking-widest text-slate-500">
                                     Message
                                 </label>
-
                                 <textarea
                                     id="message"
                                     v-model="form.message"
                                     rows="6"
                                     placeholder="Write your message..."
+                                    required
                                     class="w-full rounded-2xl bg-blur-theme px-5 py-4 outline-none border border-white/10 resize-none
                                            text-slate-800 dark:text-slate-100
                                            placeholder:text-slate-500 dark:placeholder:text-slate-400
@@ -196,18 +200,26 @@ const contacts = [
                             <!-- Button -->
                             <button
                                 type="submit"
-                                class="group cursor-pointer w-full bg-gradient-hero-primary animate-gradient rounded-2xl py-4 font-semibold text-white hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-lg"
+                                :disabled="status === 'sending'"
+                                class="group cursor-pointer w-full bg-gradient-hero-primary animate-gradient rounded-2xl py-4 font-semibold text-white hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-lg disabled:opacity-60 disabled:cursor-not-allowed"
                             >
                                 <span class="flex items-center justify-center gap-2">
-                                    Send Message
+                                    {{ status === 'sending' ? 'Sending...' : 'Send Message' }}
                                     <span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">
                                         arrow_forward
                                     </span>
                                 </span>
                             </button>
 
-                        </div>
+                            <!-- Feedback -->
+                            <p v-if="status === 'success'" class="text-green-500 text-sm text-center">
+                                ✅ Message sent successfully!
+                            </p>
+                            <p v-if="status === 'error'" class="text-red-500 text-sm text-center">
+                                ❌ Something went wrong. Please try again.
+                            </p>
 
+                        </div>
                     </form>
                 </div>
 

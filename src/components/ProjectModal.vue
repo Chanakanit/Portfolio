@@ -111,7 +111,7 @@ const openImage = (index) => {
               <span
                 v-for="tech in project.tech"
                 :key="tech"
-                class="px-3 py-1.5 rounded-lg bg-cyan-500/10 border border-cyan-500/25 text-cyan-400 text-xs font-medium"
+                class="px-3 py-1.5 rounded-lg bg-cyan-500/10 border border-cyan-500/25 text-cyan-500 dark:text-cyan-400  text-xs font-medium"
               >
                 {{ tech }}
               </span>

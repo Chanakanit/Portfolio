@@ -95,7 +95,7 @@ onUnmounted(() => window.removeEventListener("keydown", onKeydown))
           </h1>
 
           <p v-if="act.achievement"
-             class="text-lg md:text-2xl mt-3 text-purple-600 dark:text-purple-400">
+             class="text-lg md:text-2xl mt-3 text-accent-dark dark:text-accent">
             {{ act.achievement }}
           </p>
 
@@ -120,9 +120,7 @@ onUnmounted(() => window.removeEventListener("keydown", onKeydown))
               <span
                 v-for="tech in act.technologies"
                 :key="tech"
-                class="px-3 py-1 rounded-full text-sm
-                       border border-purple-400/40 bg-purple-100 text-purple-700
-                       dark:border-purple-500/30 dark:bg-purple-500/10 dark:text-purple-300"
+                class="px-3 py-1.5 rounded-lg bg-cyan-500/10 border border-cyan-500/25 text-cyan-500 dark:text-cyan-400 text-xs font-medium"
               >
                 {{ tech }}
               </span>
@@ -249,7 +247,7 @@ onUnmounted(() => window.removeEventListener("keydown", onKeydown))
           >
             <div class="flex items-center gap-3 mb-4">
               <span class="material-symbols-outlined text-3xl
-                           text-purple-600 dark:text-purple-400">
+                           text-orange-600 dark:text-orange-400 bg-blur p-2 rounded-full">
                 code
               </span>
               <h2 class="text-xl md:text-2xl font-bold text-gray-800 dark:text-white">
