@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 const props = defineProps({
   show: Boolean,
@@ -11,6 +11,28 @@ const emit = defineEmits([
   'close',
   'update:index'
 ])
+
+const touchStartX = ref(0)
+const touchEndX = ref(0)
+
+const handleTouchStart = (e) => {
+  touchStartX.value = e.changedTouches ? e.changedTouches[0].screenX : e.screenX
+}
+
+const handleTouchEnd = (e) => {
+  touchEndX.value = e.changedTouches ? e.changedTouches[0].screenX : e.screenX
+  handleSwipe()
+}
+
+const handleSwipe = () => {
+  const swipeThreshold = 50 // Minimum pixels to be considered a swipe
+  if (touchEndX.value < touchStartX.value - swipeThreshold) {
+    nextImage()
+  }
+  if (touchEndX.value > touchStartX.value + swipeThreshold) {
+    prevImage()
+  }
+}
 
 const nextImage = () => {
   if (props.activeIndex < props.images.length - 1) {
@@ -69,41 +91,52 @@ onUnmounted(() => {
     <Transition name="fade">
       <div
         v-if="show"
-        class="fixed inset-0 z-200 flex items-center justify-center p-10 bg-black/80"
+        class="fixed inset-0 z-200 flex items-center justify-center p-4 md:p-10 bg-black/90 backdrop-blur-sm"
+        @click.self="emit('close')"
       >
         <!-- close -->
         <button
           @click="emit('close')"
-          class="absolute top-5 right-5 text-white text-4xl hover:opacity-70 transition"
+          class="absolute top-5 right-5 text-white/70 hover:text-white transition z-50 hover:scale-110 drop-shadow-md"
         >
-          <span class="material-symbols-outlined text-8xl">
+          <span class="material-symbols-outlined text-5xl md:text-6xl">
             close
           </span>
         </button>
 
         <!-- prev -->
         <button
-          @click="prevImage"
-          class="absolute left-5 text-white hover:opacity-70 transition"
+          @click.stop="prevImage"
+          @mousedown.stop
+          @touchstart.stop
+          class="absolute left-6 md:left-8 w-10 h-10 md:w-12 md:h-12 top-1/2 -translate-y-1/2 text-white/80 hover:text-white transition-all hover:scale-110 z-50 bg-black/30 hover:bg-black/80 border border-white/30 rounded-full"
         >
-          <span class="material-symbols-outlined text-8xl">
+          <span class="material-symbols-outlined mt-1 ]">
             chevron_left
           </span>
         </button>
 
-        <!-- image -->
-        <img
-          :src="images[activeIndex]"
-          class="max-w-full max-h-[90vh] rounded-xl select-none"
-          draggable="false"
-        />
+        <!-- image container -->
+        <div class="relative flex items-center justify-center max-w-full max-h-full">
+          <img
+            :src="images[activeIndex]"
+            class="max-w-full max-h-[90vh] rounded-xl select-none cursor-grab active:cursor-grabbing object-contain shadow-2xl"
+            draggable="false"
+            @touchstart="handleTouchStart"
+            @touchend="handleTouchEnd"
+            @mousedown="handleTouchStart"
+            @mouseup="handleTouchEnd"
+          />
+        </div>
 
         <!-- next -->
         <button
-          @click="nextImage"
-          class="absolute right-5 text-white hover:opacity-70 transition"
+          @click.stop="nextImage"
+          @mousedown.stop
+          @touchstart.stop
+          class="absolute right-6 md:right-8 w-10 h-10 md:w-12 md:h-12 top-1/2 -translate-y-1/2 text-white/80 hover:text-white transition-all hover:scale-110 z-50 bg-black/30 hover:bg-black/80 border border-white/30 rounded-full"
         >
-          <span class="material-symbols-outlined text-5xl">
+          <span class="material-symbols-outlined mt-1 ">
             chevron_right
           </span>
         </button>
