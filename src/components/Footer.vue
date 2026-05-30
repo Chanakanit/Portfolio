@@ -33,7 +33,7 @@ const socialLinks = [
             <div class="flex flex-col md:flex-row md:items-center gap-5 md:gap-7">
 
                 <h1
-                    class="text-3xl font-black font-serif text-slate-900 dark:text-white"
+                    class="text-3xl font-black text-center md:text-start font-serif text-slate-900 dark:text-white"
                 >
                     Chanakanit
                 </h1>
