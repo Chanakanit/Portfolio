@@ -1,6 +1,32 @@
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
 import { useReveal } from '../script/useReveal.js'
 useReveal()
+
+const isDesktop = ref(false)
+const isDark = ref(false)
+
+const checkWindowSize = () => {
+  isDesktop.value = window.innerWidth >= 768
+}
+
+let observer = null
+
+onMounted(() => {
+  checkWindowSize()
+  window.addEventListener('resize', checkWindowSize)
+
+  isDark.value = document.documentElement.classList.contains('dark')
+  observer = new MutationObserver(() => {
+    isDark.value = document.documentElement.classList.contains('dark')
+  })
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] })
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', checkWindowSize)
+  if (observer) observer.disconnect()
+})
 
 const socialLinks = [
   { 
@@ -115,13 +141,14 @@ const socialLinks = [
             role="presentation"
         >
             <video
+                v-if="isDesktop && isDark"
                 autoplay
                 muted
                 loop
                 playsinline
                 preload="metadata"
                 poster="/assets/logo/logo-model-dark.svg"
-                class="hidden dark:block absolute inset-0 h-full w-full object-contain opacity-80 smooth"
+                class="absolute inset-0 h-full w-full object-contain opacity-80 smooth"
             >
                 <source
                     src="/assets/logo/animation-logo-dark.mp4"
@@ -130,13 +157,14 @@ const socialLinks = [
             </video>
             
             <video
+                v-if="isDesktop && !isDark"
                 autoplay
                 muted
                 loop
                 playsinline
                 preload="metadata"
                 poster="/assets/logo/logo-model-light.svg"
-                class="block dark:hidden absolute inset-0 h-full w-full object-contain smooth"
+                class="absolute inset-0 h-full w-full object-contain smooth"
             >
                 <source
                     src="/assets/logo/animation-logo-light.mp4"

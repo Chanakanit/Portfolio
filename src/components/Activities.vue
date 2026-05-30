@@ -23,15 +23,11 @@ const closeModal = () => {
 }
 
 watch(isOpen, (value) => {
-  if (value) {
-    document.body.classList.add("overflow-hidden")
-  } else {
-    document.body.classList.remove("overflow-hidden")
-  }
+  document.body.style.overflow = value ? "hidden" : "auto"
 })
 
 onUnmounted(() => {
-  document.body.classList.remove("overflow-hidden")
+  document.body.style.overflow = "auto"
 })
 
 const filtered = computed(() => {

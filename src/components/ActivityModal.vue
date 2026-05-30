@@ -50,13 +50,14 @@ onUnmounted(() => window.removeEventListener("keydown", onKeydown))
 </script>
 
 <template>
-  <transition name="fade">
-    <div
-      v-if="isOpen && act"
-      class="fixed inset-0 z-100 p-2 md:p-10 md:px-16 w-full overflow-y-auto
-             bg-white text-gray-900
-             dark:bg-bg-dark dark:text-white"
-    >
+  <Teleport to="body">
+    <transition name="fade">
+      <div
+        v-if="isOpen && act"
+        class="fixed inset-0 z-100 p-2 md:p-10 md:px-16 w-full overflow-y-auto
+               bg-white text-gray-900
+               dark:bg-bg-dark dark:text-white"
+      >
 
       <!-- Nav -->
       <div class="flex justify-between ">
@@ -262,7 +263,8 @@ onUnmounted(() => window.removeEventListener("keydown", onKeydown))
 
       </div>
     </div>
-  </transition>
+    </transition>
+  </Teleport>
 
   <ImgModal
     v-if="act?.img?.length"
