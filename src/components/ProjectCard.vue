@@ -12,7 +12,7 @@ defineEmits(['open'])
     >
         <!-- IMG -->
          <div class="overflow-hidden w-full h-50">
-           <img :src="project.screenshot[0]" :alt="project.name" class="w-full h-full smooth-bg object-cover  hover:scale-110"/>
+           <img loading="lazy" :src="project.screenshot[0]" :alt="project.name" class="w-full h-full smooth-bg object-cover  hover:scale-110"/>
          </div>
 
         <!-- Title + Desc -->

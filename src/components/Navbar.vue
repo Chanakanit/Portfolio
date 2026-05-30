@@ -111,32 +111,50 @@ function toggleHam() {
                 <!-- Click-outside overlay -->
                 <div class="absolute inset-0 z-51" aria-hidden="true" @click="toggleHam"></div>
 
-                <div class="absolute flex flex-col items-center z-52 right-0 top-0 h-full w-4/5 max-w-sm
+                <div class="absolute flex flex-col z-52 right-0 top-0 h-full w-4/5 max-w-sm
                             bg-white/80 dark:bg-bg-dark/90 backdrop-blur-2xl
-                            border-l border-white/20 dark:border-white/10 shadow-2xl">
+                            border-l border-white/20 dark:border-white/10 shadow-2xl
+                            pt-32 pb-10 px-6 overflow-y-auto">
+
+                    <!-- Decorative Gradient Orb -->
+                    <div class="absolute top-1/4 right-0 w-64 h-64 bg-gradient-hero-primary rounded-full blur-[100px] opacity-20 pointer-events-none"></div>
 
                     <!-- Mobile links -->
-                    <nav aria-label="Mobile navigation" class="my-auto flex flex-col gap-10 text-center text-3xl">
-                        <a v-for="nav in navs" :key="nav.name"
+                    <nav aria-label="Mobile navigation" class="flex flex-col gap-4 w-full text-xl relative z-10">
+                        <a v-for="(nav, index) in navs" :key="nav.name"
                             :href="nav.href"
-                            class="hover-link hover:font-semibold"
+                            class="px-8 py-4 w-full text-center rounded-2xl font-medium transition-all duration-200
+                                   hover:bg-primary/5 dark:hover:bg-white/5 
+                                   active:bg-primary/10 dark:active:bg-white/10 active:scale-95
+                                   hover:text-primary dark:hover:text-primary-dark-soft
+                                   animate-fade-up opacity-0"
+                            :style="`animation-delay: ${index * 100}ms; animation-fill-mode: forwards;`"
                             @click="toggleHam"
                         >{{ nav.name }}</a>
                     </nav>
+
+                    <div class="mt-auto"></div>
 
                     <!-- Mobile theme toggle -->
                     <button
                         @click="toggleTheme"
                         :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
                         :aria-pressed="isDark"
-                        class="flex items-center justify-center mb-10"
+                        class="flex items-center justify-center gap-3 w-full px-8 py-4 mt-8 rounded-2xl transition-all duration-200
+                               hover:bg-primary/5 dark:hover:bg-white/5 
+                               active:bg-primary/10 dark:active:bg-white/10 active:scale-95
+                               animate-fade-up opacity-0 relative z-10"
+                        :style="`animation-delay: ${navs.length * 100}ms; animation-fill-mode: forwards;`"
                     >
                         <span
                             class="material-symbols-outlined"
-                            :class="isDark ? 'bg-blur icon-blur' : 'bg-blur-blue icon-blur-blue'"
+                            :class="isDark ? 'text-primary dark:text-primary-dark-soft' : 'text-secondary-dark'"
                             aria-hidden="true"
                         >
                             {{ isDark ? 'light_mode' : 'dark_mode' }}
+                        </span>
+                        <span class="font-medium text-lg text-slate-700 dark:text-slate-300">
+                            {{ isDark ? 'Light Mode' : 'Dark Mode' }}
                         </span>
                     </button>
                 </div>

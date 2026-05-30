@@ -81,7 +81,7 @@ const skillCategories = [
                      :key="skill.name"
                      class="flex items-center gap-3"
                      >
-                         <img class="w-7 h-7" :src="skill.icon" />
+                         <img loading="lazy" alt="" class="w-7 h-7" :src="skill.icon" />
      
                          <p>{{ skill.name }}</p>
                      </div>

@@ -1,16 +1,18 @@
 <script setup>
+import { defineAsyncComponent } from 'vue';
 import Hero from './components/Hero.vue';
 import Navbar from './components/Navbar.vue';
-import About from './components/About.vue';
-import Skills from './components/Skills.vue';
-import Project from './components/Project.vue';
-import Activities from './components/Activities.vue';
-import Contact from './components/Contact.vue';
-import Footer from './components/Footer.vue';
+
+const About = defineAsyncComponent(() => import('./components/About.vue'));
+const Skills = defineAsyncComponent(() => import('./components/Skills.vue'));
+const Project = defineAsyncComponent(() => import('./components/Project.vue'));
+const Activities = defineAsyncComponent(() => import('./components/Activities.vue'));
+const Contact = defineAsyncComponent(() => import('./components/Contact.vue'));
+const Footer = defineAsyncComponent(() => import('./components/Footer.vue'));
 </script>
 
 <template>
-  <div class="mx-auto md:max-w-5/6">
+  <main class="mx-auto md:max-w-5/6">
     <Navbar />
     <Hero/>
     <About/>
@@ -19,5 +21,5 @@ import Footer from './components/Footer.vue';
     <Activities/>
     <Contact/>
     <Footer/>
-  </div>
+  </main>
 </template>

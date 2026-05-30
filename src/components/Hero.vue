@@ -65,13 +65,7 @@ const socialLinks = [
             <div class="mt-8">
                 <a
                     href="#projects"
-                    class="group inline-flex items-center gap-3
-                        bg-primary dark:bg-primary-dark
-                        text-white
-                        px-7 py-3.5 rounded-2xl font-semibold
-                        shadow-lg shadow-primary/20
-                        hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/30
-                        transition-all duration-300"
+                    class="group btn-primary"
                 >
 
                         View Projects
@@ -125,6 +119,7 @@ const socialLinks = [
                 muted
                 loop
                 playsinline
+                preload="metadata"
                 poster="/assets/logo/logo-model-dark.svg"
                 class="hidden dark:block absolute inset-0 h-full w-full object-contain opacity-80 smooth"
             >
@@ -139,6 +134,7 @@ const socialLinks = [
                 muted
                 loop
                 playsinline
+                preload="metadata"
                 poster="/assets/logo/logo-model-light.svg"
                 class="block dark:hidden absolute inset-0 h-full w-full object-contain smooth"
             >

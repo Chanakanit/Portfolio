@@ -142,7 +142,7 @@ const timeline = [
                             My goal is to become a Full Stack Developer who creates impactful digital products by combining technology, creativity, and business understanding.
                         </p>
                         <p class="text-sm md:text-base text-blue-700 dark:text-secondary">
-                            I want to build solutions meaningful problems for people.
+                            I want to build solutions that solve meaningful problems for people.
                         </p>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, watch } from "vue"
+import { ref, computed, watch, onUnmounted } from "vue"
 import { categories, activities } from "../data/Activities.js"
 import ActivityModal from "./ActivityModal.vue"
 
@@ -28,6 +28,10 @@ watch(isOpen, (value) => {
   } else {
     document.body.classList.remove("overflow-hidden")
   }
+})
+
+onUnmounted(() => {
+  document.body.classList.remove("overflow-hidden")
 })
 
 const filtered = computed(() => {
@@ -75,8 +79,9 @@ const filtered = computed(() => {
         v-for="cat in navs"
         :key="cat"
         @click="activeFilter = cat"
+        :aria-pressed="activeFilter === cat"
         :class="[
-          'px-5 py-2 rounded-4xl border text-sm font-medium transition-all duration-200',
+          'btn-filter',
           activeFilter === cat
             ? 'bg-blue-400/20 border-blue-400 text-blue-800 dark:text-white'
             : 'bg-white/5 border-white/10 text-slate-400 hover:border-blue-500/40 hover:text-blue-300',
