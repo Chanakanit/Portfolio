@@ -1,6 +1,79 @@
 export const categories = ["All", "Web Apps", "Data", "Script", "Line OA"]
 
 export const projects = [
+    {
+      category: "Web Apps",
+      type: "Educational",
+      name: "Grammora",
+      roleType: "Full Stack Developer",
+      contributors: [
+        "Chanakan Ukhaow",
+      ],
+      screenshot: [
+        "/assets/projects/grammora/logo.svg",
+        "/assets/projects/grammora/1.png",
+        "/assets/projects/grammora/2.png",
+        "/assets/projects/grammora/3.png",
+        "/assets/projects/grammora/4.png",
+        "/assets/projects/grammora/5.png",
+        "/assets/projects/grammora/6.png",
+        "/assets/projects/grammora/7.png",
+        "/assets/projects/grammora/8.png",
+        "/assets/projects/grammora/9.png",
+      ],
+      techIcons: [
+        { icon: "/assets/logo-stack/NextJS.png", name: "Next.js" },
+        { icon: "/assets/logo-stack/TypeScript.png", name: "TypeScript" },
+        { icon: "/assets/logo-stack/Tailwind.png", name: "Tailwind CSS" },
+        { icon: "/assets/logo-stack/Prisma.png", name: "Prisma ORM" },
+        { icon: "/assets/logo-stack/PostgreSQL.png", name: "PostgreSQL" }
+      ],
+      desc: "English grammar and speaking learning platform with gamification, featuring Google Gemini AI as a personal coach and a premium subscription system.",
+      tech: [
+        "Next.js 14",
+        "TypeScript",
+        "Tailwind CSS",
+        "Prisma ORM",
+        "PostgreSQL",
+        "Google Gemini AI",
+        "NextAuth.js",
+        "Omise API"
+      ],
+      contribution:
+        "Architected the full-stack application, integrated Google Gemini AI for grammar evaluation, implemented Omise payment gateway, and built gamified learning features.",
+      demo: "https://grammora.vercel.app/",
+      detail: [
+        {
+          title: "Overview",
+          desc: [
+            "Grammora is an English learning platform that combines gamification with advanced AI capabilities to help users improve their grammar and speaking skills.",
+            "The platform uses Google Gemini AI as a personal language coach, offering grammar explanations, image analysis, and speaking evaluation.",
+            "It features a freemium model with a built-in payment system for premium access."
+          ]
+        },
+        {
+          title: "Features",
+          desc: [
+            "Interactive grammar games including quizzes, fill-in-the-blanks, matching, and sentence ordering.",
+            "Speaking practice games with Web Speech API for voice-to-text conversion and AI evaluation.",
+            "AI chatbot for grammar explanation and Q&A using Google Gemini API.",
+            "Premium subscription system with automated tier management and AI quota rate limiting.",
+            "Secure payment integration via Omise API for seamless checkout.",
+            "User progress tracking, scoring system, and streak management."
+          ]
+        },
+        {
+          title: "Contribution",
+          desc: [
+            "Architected the full-stack application using Next.js App Router and TypeScript.",
+            "Designed and implemented the database schema using Prisma and PostgreSQL (Supabase).",
+            "Integrated Google Gemini AI with multi-model fallback and quota management systems.",
+            "Developed secure authentication using NextAuth.js with Google OAuth.",
+            "Implemented subscription tier logic and integrated Omise payment gateway for premium packages."
+          ]
+        }
+      ]
+  },
   {
     category: "Web Apps",
     type: "Educational",
@@ -103,7 +176,7 @@ export const projects = [
         "name": "Google Gemini AI"
       },
       {
-        "icon": "/assets/logo-stack/sheets.png",
+        "icon": "/assets/logo-stack/sheet.png",
         "name": "Google Sheets"
       }
     ],
