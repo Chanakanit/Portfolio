@@ -1,4 +1,4 @@
-export const categories = ["All", "Web Apps", "Data", "Script"]
+export const categories = ["All", "Web Apps", "Data", "Script", "Line OA"]
 
 export const projects = [
   {
@@ -66,6 +66,83 @@ export const projects = [
           "Implemented search, sort, and filter systems for articles.",
           "Built relaxation activity pages and detail routing with Vue Router.",
           "Contributed to shared F5 collaboration features including UI feedback and interaction flow."
+        ]
+      }
+    ]
+  },
+
+  {
+    "category": "Line OA",
+    "type": "Automation & Finance",
+    "name": "Bill Check",
+    "roleType": "Individual",
+    "contributors": [
+      "Chanakan Ukhaow"
+    ],
+    "screenshot": [
+      "/assets/projects/billcheck/logo.png",
+      "/assets/projects/billcheck/flow.png",
+      "/assets/projects/billcheck/sheet-log.png",
+      "/assets/projects/billcheck/sheet-summary.png",
+      "/assets/projects/billcheck/1.jpg",
+      "/assets/projects/billcheck/2.png",
+      "/assets/projects/billcheck/3.png",
+      "/assets/projects/billcheck/4.png",
+    ],
+    "techIcons": [
+      {
+        "icon": "/assets/logo-stack/line.png",
+        "name": "LINE Messaging API"
+      },
+      {
+        "icon": "/assets/logo-stack/make.png",
+        "name": "Make.com"
+      },
+      {
+        "icon": "/assets/logo-stack/gemini.png",
+        "name": "Google Gemini AI"
+      },
+      {
+        "icon": "/assets/logo-stack/sheets.png",
+        "name": "Google Sheets"
+      }
+    ],
+    "desc": "An intelligent LINE OA chatbot acting as an accounting assistant, processing text, audio, and image inputs to automate billing and track expenses.",
+    "tech": [
+      "LINE Messaging API",
+      "Make.com",
+      "Google Gemini AI",
+      "Google Sheets",
+      "JSON"
+    ],
+    "contribution": "Architected the complete automation flow, integrated Gemini AI for multi-modal intent parsing, and configured the Google Sheets database.",
+    "demo": "https://line.me/R/ti/p/@988hjhoo",
+    "detail": [
+      {
+        "title": "Overview",
+        "desc": [
+          "Bill Check is an automated accounting assistant built on LINE Official Account.",
+          "The system allows users to track purchases, payments, and outstanding balances effortlessly using natural language, voice memos, or slip images.",
+          "It eliminates manual data entry by utilizing AI to automatically extract intents, calculate net balances, and record data directly into Google Sheets."
+        ]
+      },
+      {
+        "title": "Features",
+        "desc": [
+          "Multi-modal input processing supporting Text, Audio (m4a), and Images (slips/receipts).",
+          "Automated intent parsing into structured JSON arrays using Google Gemini AI.",
+          "Interactive LINE Postback template buttons for user confirmation before saving data.",
+          "Real-time database integration with Google Sheets for searching, adding, and aggregating transactions.",
+          "Multi-user transaction handling within a single prompt (e.g., parsing multiple names and amounts simultaneously)."
+        ]
+      },
+      {
+        "title": "Contribution",
+        "desc": [
+          "Designed and implemented the entire Make.com integration flow and routing logic.",
+          "Created custom Gemini AI prompts to strictly output JSON formats and handle complex user intents.",
+          "Configured LINE Messaging API for push messages, reply messages, and interactive buttons.",
+          "Set up Google Sheets modules for tracking user transactions and calculating accumulated balances."
         ]
       }
     ]

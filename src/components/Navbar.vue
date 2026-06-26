@@ -1,10 +1,10 @@
 <script setup>
-import { ref, onMounted } from 'vue';
-
-const isDark = ref(false)
+import { ref, onMounted, onUnmounted } from 'vue';
 
 import { useReveal } from '../script/useReveal.js'
 useReveal()
+
+const isDark = ref(false)
 
 function applyTheme(value) {
     isDark.value = value
@@ -12,30 +12,57 @@ function applyTheme(value) {
     localStorage.setItem("theme", value ? "dark" : "light")
 }
 
-onMounted(() => {
-    const savedTheme = localStorage.getItem("theme")
-    const shouldUseDark =
-        savedTheme === "dark" ||
-        (savedTheme === null && window.matchMedia("(prefers-color-scheme: dark)").matches)
-    applyTheme(shouldUseDark)
-})
-
 function toggleTheme() {
     applyTheme(!isDark.value)
 }
 
 const navs = [
-    { name: "About",    href: "#about" },
-    { name: "Skills",   href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Activities",  href: "#activities" },
-    { name: "Contact",  href: "#contact" },
+    { name: "About",      href: "#about" },
+    { name: "Skills",     href: "#skills" },
+    { name: "Projects",   href: "#projects" },
+    { name: "Activities", href: "#activities" },
+    { name: "Contact",    href: "#contact" },
 ]
 
+const activeSection = ref('about')
 const openHam = ref(false)
+
 function toggleHam() {
     openHam.value = !openHam.value
 }
+
+function updateActiveSection() {
+    const sectionIds = navs.map(n => n.href.slice(1))
+    const offset = 120 // navbar height offset
+
+    let current = sectionIds[0]
+    for (const id of sectionIds) {
+        const el = document.getElementById(id)
+        if (!el) continue
+        const top = el.getBoundingClientRect().top
+        if (top <= offset) {
+            current = id
+        }
+    }
+    activeSection.value = current
+}
+
+onMounted(() => {
+    // Theme
+    const savedTheme = localStorage.getItem("theme")
+    const shouldUseDark =
+        savedTheme === "dark" ||
+        (savedTheme === null && window.matchMedia("(prefers-color-scheme: dark)").matches)
+    applyTheme(shouldUseDark)
+
+    // Active nav via scroll
+    window.addEventListener('scroll', updateActiveSection, { passive: true })
+    updateActiveSection()
+})
+
+onUnmounted(() => {
+    window.removeEventListener('scroll', updateActiveSection)
+})
 </script>
 
 <template>
@@ -50,11 +77,14 @@ function toggleHam() {
 
         <!-- Desktop nav -->
         <nav aria-label="Main navigation"
-            class="opacity-0 animate-delay-200 animate-fade-down dark:text-secondary-dark0 hidden text-blue-800 dark:text-blue-100 md:flex items-center justify-center gap-6 bg-blur px-6 py-3 rounded-full transition-all duration-200 text-lg ease-in hover:px-12  "
+            class="opacity-0 animate-delay-200 animate-fade-down dark:text-secondary-dark0 hidden text-blue-800 dark:text-blue-100 md:flex items-center justify-center gap-6 bg-blur px-6 py-3 rounded-full transition-all duration-200 text-lg ease-in hover:px-12"
         >
             <a v-for="nav in navs" :key="nav.name"
                 :href="nav.href"
-                class=" hover:font-semibold  hover-link"
+                class="hover-link transition-all duration-200"
+                :class="activeSection === nav.href.slice(1)
+                    ? 'text-accent dark:text-accent-dark-soft font-semibold scale-110'
+                    : ''"
             >{{ nav.name }}</a>
         </nav>
 
@@ -124,10 +154,10 @@ function toggleHam() {
                         <a v-for="(nav, index) in navs" :key="nav.name"
                             :href="nav.href"
                             class="px-8 py-4 w-full text-center rounded-2xl font-medium transition-all duration-200
-                                   hover:bg-primary/5 dark:hover:bg-white/5 
-                                   active:bg-primary/10 dark:active:bg-white/10 active:scale-95
-                                   hover:text-primary dark:hover:text-primary-dark-soft
-                                   animate-fade-up opacity-0"
+                                   active:scale-95 animate-fade-up opacity-0"
+                            :class="activeSection === nav.href.slice(1)
+                                ? 'text-accent dark:text-accent-dark-soft bg-accent/10 dark:bg-accent-dark/10 font-semibold'
+                                : 'hover:bg-primary/5 dark:hover:bg-white/5 hover:text-accent-dark-soft dark:hover:text-accent-dark-soft'"
                             :style="`animation-delay: ${index * 100}ms; animation-fill-mode: forwards;`"
                             @click="toggleHam"
                         >{{ nav.name }}</a>
@@ -141,7 +171,7 @@ function toggleHam() {
                         :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
                         :aria-pressed="isDark"
                         class="flex items-center justify-center gap-3 w-full px-8 py-4 mt-8 rounded-2xl transition-all duration-200
-                               hover:bg-primary/5 dark:hover:bg-white/5 
+                               hover:bg-primary/5 dark:hover:bg-white/5
                                active:bg-primary/10 dark:active:bg-white/10 active:scale-95
                                animate-fade-up opacity-0 relative z-10"
                         :style="`animation-delay: ${navs.length * 100}ms; animation-fill-mode: forwards;`"

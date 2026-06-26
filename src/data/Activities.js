@@ -2,6 +2,36 @@ export const categories = ["All", "Activities", "Competitions"]
 
 export const activities = [
     {
+    year: "2025",
+    act: [
+        {
+            icon: "co_present",
+            type: "Activities",
+            title: "Starter Pack 2025",
+            achievement: "Speaker / Instructor",
+            organizer: "SIT, KMUTT",
+            technologies: [
+                "21st Century Skills",
+                "Growth Mindset",
+                "Systematic Thinking",
+                "Hardware & Software Fundamentals",
+                "AI as a Tool",
+                "Team Collaboration Tools"
+            ],
+            description: "รับหน้าที่เป็นวิทยากรบรรยายและจัดเวิร์กชอปในกิจกรรมปูพื้นฐาน (Starter Pack) วิชา IT Fundamental สำหรับนักศึกษาใหม่ชั้นปีที่ 1 เพื่อเตรียมความพร้อมก่อนเปิดภาคเรียน โดยเน้นการสร้าง Triangle of Success: ทัศนคติ (Mindset) + ทักษะ (Skills) + ความรู้ (Knowledge)",
+            learned: "ได้พัฒนาทักษะการถ่ายทอดความรู้ (Public Speaking) การออกแบบหลักสูตรที่เน้นผู้เรียนเป็นศูนย์กลาง และการจัดกิจกรรม Workshop ให้สนุกและเข้าใจง่าย (Gamification) เพื่อกระตุ้นความสนใจของน้องๆ เฟรชชี่ในการเริ่มต้นสายอาชีพ IT",
+            overview: "หลักสูตรระยะเวลา 3 วัน ประกอบด้วย:\nวันที่ 1: โลกของเทคโนโลยีสารสนเทศ - ปูพื้นฐาน 21st Century Skills, Learning How to Learn และ Workshop 'IT ในชีวิตประจำวัน'\nวันที่ 2: Mindset & Soft Skills - เสริมสร้าง Growth Mindset, เทคนิคคิดแบบ Systematic Thinking, การสื่อสารในทีม และการประยุกต์ใช้ AI ให้เป็นเครื่องมือ\nวันที่ 3: IT Fundamentals - สรุปพื้นฐาน Hardware/Software, การเปรียบเทียบ OS (Windows, macOS, Linux) และ Workshop 'เกมใบ้คำศัพท์ IT' เพื่อทบทวนความรู้แบบไม่เครียด",
+            img: [
+                "/assets/Activities/Starter-pack-2025/1.jpg",
+                "/assets/Activities/Starter-pack-2025/2.jpg",
+                "/assets/Activities/Starter-pack-2025/3.jpg",
+                "/assets/Activities/Starter-pack-2025/4.jpg",
+                "/assets/Activities/Starter-pack-2025/5.jpg",
+            ]
+            }
+        ]
+    },
+    {
     year: "2026",
     act: [
         {
@@ -33,5 +63,5 @@ export const activities = [
             ]
             }
         ]
-    },
+    }
 ]
