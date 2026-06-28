@@ -4,7 +4,7 @@ export const projects = [
     {
       category: "Web Apps",
       type: "Educational",
-      name: "Grammora",
+      name: "Grammoral",
       roleType: "Full Stack Developer",
       contributors: [
         "Chanakan Ukhaow",
@@ -20,6 +20,7 @@ export const projects = [
         "/assets/projects/grammora/7.png",
         "/assets/projects/grammora/8.png",
         "/assets/projects/grammora/9.png",
+        "/assets/projects/grammora/10.png",
       ],
       techIcons: [
         { icon: "/assets/logo-stack/NextJS.png", name: "Next.js" },
@@ -41,12 +42,12 @@ export const projects = [
       ],
       contribution:
         "Architected the full-stack application, integrated Google Gemini AI for grammar evaluation, implemented Omise payment gateway, and built gamified learning features.",
-      demo: "https://grammora.vercel.app/",
+      demo: "https://grammoral.vercel.app/",
       detail: [
         {
           title: "Overview",
           desc: [
-            "Grammora is an English learning platform that combines gamification with advanced AI capabilities to help users improve their grammar and speaking skills.",
+            "Grammoral is an English learning platform that combines gamification with advanced AI capabilities to help users improve their grammar and speaking skills.",
             "The platform uses Google Gemini AI as a personal language coach, offering grammar explanations, image analysis, and speaking evaluation.",
             "It features a freemium model with a built-in payment system for premium access."
           ]
